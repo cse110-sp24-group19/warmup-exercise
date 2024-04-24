@@ -10,6 +10,15 @@ const currdate = document
  
 const prenexIcons = document
     .querySelectorAll(".calendar-navigation span");
+
+const calendarView = document
+    .querySelector('.calendar-container');
+
+const dayView = document
+    .querySelector('.day-view');
+
+const returnCalendarButton = document
+    .getElementById('return-calendar');
  
 // Array of month names
 const months = [
@@ -75,10 +84,35 @@ const manipulate = () => {
     // update the HTML of the dates element 
     // with the generated calendar
     day.innerHTML = lit;
+
+    //Attach event listeners to each date for opening day view
+    document.querySelectorAll('.date-item').forEach(item => {
+        item.addEventListener('click', () => openDayView(item.dataset.date));
+    })
 }
  
 manipulate();
- 
+
+//Function that opens the day view
+function openDayView(date){
+    //Shows day view
+    dayView.style.display = 'block';
+    //Hide calendar view
+    calendarView.style.display = 'none';
+    
+    //possible update day view content based on the clicked date
+}
+
+//Function to close day view and return to calendar
+function closeDayView(){
+
+    //Hides day view
+    dayView.style.display = 'none';
+
+    //Shows calendar view
+    calendarView.Style.display = 'block';
+}
+
 // Attach a click event listener to each icon
 prenexIcons.forEach(icon => {
  
