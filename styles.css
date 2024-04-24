@@ -1,156 +1,158 @@
-/*
-Added the selectors you might need to modify
-    -Brandon
-*/
-
-
-/* 
-
-
-h1{
-
+@font-face {
+  font-family: "raleway";
+  src: url("assets/Raleway-Italic.ttf");
 }
-
-h3{
-
+@font-face {
+  font-family: "comfortaa";
+  src: url("assets/Comfortaa-Regular.ttf");
 }
-
-*/
-
 
 * {
-    margin: 0;
-    padding: 0;
-    font-family: 'Poppins', sans-serif;
-  }
-  body {
-    display: flex;
-    background-color: #8BC6EC;
-    background-image: linear-gradient(135deg, #8BC6EC 0%, #9599E2 100%);
-    min-height: 100vh;
-    padding: 0 10px;
-    align-items: center;
-    justify-content: center;
-  }
-  /* use this to edit the calendar container as a whole */
-  .calendar-container {
-    background: #fff;
-    width: 1000px;
-    height: 900px;
-    border-radius: 10px;
-    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.12);
-  }
-  /* use this to edit the header container of the calendar container, this includes: Current Date and navigation buttons */
-  .calendar-container header {
-    display: flex;
-    align-items: center;
-    padding: 25px 30px 10px;
-    justify-content: space-between;
-  }
-  
-  /*use this to control the navigation itself */
-  header .calendar-navigation {
-    display: flex;
-  }
-  
-  /* use this to control the navigation buttons < >*/
-  header .calendar-navigation span {
-    height: 38px;
-    width: 38px;
-    margin: 0 1px;
-    cursor: pointer;
-    text-align: center;
-    line-height: 38px;
-    border-radius: 50%;
-    user-select: none;
-    color: #aeabab;
-    font-size: 1.9rem;
-  }
-  
-  .calendar-navigation span:last-child {
-    margin-right: -10px;
-  }
-  
-  header .calendar-navigation span:hover {
-    background: #f2f2f2;
-  }
-  /* Use this change the style of the current date header i.e April, 2024 */
-  header .calendar-current-date {
-    font-weight: 500;
-    font-size: 2.45rem;
-    margin:10px;
-    font-family: "Inter", sans-serif;
-    font-style: normal;
-  }
-  
-  .calendar-body {
-    padding: 50px;
-  }
-  
-  .calendar-body ul {
-    list-style: none;
-    flex-wrap: wrap;
-    display: flex;
-    text-align: center;
-  }
-  
-  .calendar-body .calendar-dates {
-    margin-bottom: 20px;
-  }
-  /*Use this to edit the individual dates in the calendar as a whole */
-  .calendar-body li {
-    width: calc(100% / 7);
-    font-size: 1.67rem;
-    color: #414141;
-  }
-  
-  /* Use this to change the font of the week days (Monday, Tuesday, Wednesday,.., etc) */
-  .calendar-body .calendar-weekdays li {
-    cursor: default;
-    font-size: 2em;
-    font-weight: 700;
-  }
-  
-  /* use this to change the rows in the calendar*/
-  .calendar-body .calendar-dates li {
-    margin-top: 80px;
-    position: relative;
-    z-index: 1;
-    cursor: pointer;
-  }
-  
-  /* use this to change the color of dates that are in the past month or in the next month */
-  .calendar-dates li.inactive {
-    color: #aaa;
-  }
-  
-  /* use this to change the color of dates that are in current month */
-  .calendar-dates li.active {
-    color: #fff;
-  }
-  
-  .calendar-dates li::before {
-    position: absolute;
-    content: "";
-    z-index: -1;
-    top: 50%;
-    left: 50%;
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    transform: translate(-50%, -50%);
-  }
-  
-  /*use this to change the color of the current date */
-  .calendar-dates li.active::before {
-    background: linear-gradient(to bottom, rgba(255,255,255,0.15) 0%, rgba(0,0,0,0.15) 100%), radial-gradient(at top center, rgba(255,255,255,0.40) 0%, rgba(0,0,0,0.40) 120%) #989898;
-    background-blend-mode: multiply,multiply;
-  }
-  
-  /* Use this to change the color of when you hover on dates */
-  .calendar-dates li:hover::before {
-    background: #e4e1e1;
-  }
+  margin: 0;
+  padding: 0;
+  font-family: comfortaa, Tahoma, sans-serif;
+}
+
+body {
+  display: flex;
+  background-color: #8BC6EC;
+  background-image: linear-gradient(135deg, #8BC6EC 0%, #9599E2 100%);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  min-height: 100%;
+  align-items: center;
+  justify-content: center;
+}
+
+/* use this to edit the calendar container as a whole */
+.calendar-container {
+  background: #fff;
+  margin: 100px 60px;
+  width: 1000px;
+  height: 750px;
+  border-radius: 30px;
+  box-shadow: 2px 2px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+/* use this to edit the header container of the calendar container, this includes: Current Date and navigation buttons */
+.calendar-container header {
+  display: flex;
+  align-items: center;
+  padding: 25px 30px 0;
+  justify-content: space-between;
+}
+
+/*use this to control the navigation itself */
+header .calendar-navigation {
+  display: flex;
+}
+
+/* use this to control the navigation buttons < >*/
+header .calendar-navigation span {
+  height: 38px;
+  width: 38px;
+  margin: 0 1px;
+  cursor: pointer;
+  text-align: center;
+  line-height: 38px;
+  border-radius: 50%;
+  user-select: none;
+  color: #aeabab;
+  font-size: 1.9rem;
+}
+
+.calendar-navigation span:last-child {
+  margin-right: -10px;
+}
+
+header .calendar-navigation span:hover {
+  background: #f2f2f2;
+}
+
+/* Use this change the style of the current date header i.e April, 2024 */
+header .calendar-current-date {
+  font-weight: 500;
+  font-size: 2.45rem;
+  margin:10px;
+  font-family: raleway, Tahoma, sans-serif;
+  font-style: normal;
+}
+
+.calendar-body {
+  padding: 50px;
+}
+
+.calendar-body ul {
+  list-style: none;
+  flex-wrap: wrap;
+  display: flex;
+  text-align: center;
+}
+
+.calendar-body .calendar-dates {
+  margin-bottom: 20px;
+}
+
+/*Use this to edit the individual dates in the calendar as a whole */
+.calendar-body li {
+  width: calc(100% / 7);
+  font-size: 16px;
+  color: #414141;
+}
+
+/* Use this to change the font of the week days (Monday, Tuesday, Wednesday,.., etc) */
+.calendar-body .calendar-weekdays li {
+  cursor: default;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.calendar-body .calendar-weekdays .sunday {
+  color: #d44e60;
+}
+
+/* use this to change the rows in the calendar*/
+.calendar-body .calendar-dates li {
+  margin-top: 65px;
+  position: relative;
+  z-index: 1;
+  cursor: pointer;
+}
+
+/* use this to change the color of dates that are in the past month or in the next month */
+.calendar-dates li.inactive {
+  color: #aaa;
+}
+
+/* use this to change the color of dates that are in current month */
+.calendar-dates li.active {
+  color: #fff;
+}
+
+.calendar-dates li::before {
+  position: absolute;
+  content: "";
+  z-index: -1;
+  top: 50%;
+  left: 50%;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/*use this to change the color of the current date */
+.calendar-dates li.active::before {
+  background: linear-gradient(to bottom, rgba(255,255,255,0.15) 0%, rgba(0,0,0,0.15) 100%), 
+  radial-gradient(at top center, rgba(255,255,255,0.40) 0%, rgba(0,0,0,0.40) 120%) #989898;
+  background-blend-mode: multiply,multiply;
+}
+
+/* Use this to change the color of when you hover on dates */
+.calendar-dates li:hover::before {
+  background: #e4e1e1;
+}
 /*
 
 .day-view{
