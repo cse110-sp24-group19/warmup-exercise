@@ -5,6 +5,8 @@
     <meta name = "author" content="Group 19">
     <meta name="description" content="This page contains our group warm up implementation.">
     <title>Warm Up</title>
+
+    <link rel="stylesheet" type="text/css" href="styles.css">
     
   </head>
 
@@ -44,48 +46,49 @@
         <div id="days">
             <!--Javascript should determine: unused days, day containers needed, start-end of month
             {#}: either empty or a day number. -->
-            <div id="day"><h3 id="day-number">{#}</h3></div>
-            <div id="day"><h3 id="day-number">{#}</h3></div>
-            <div id="day"><h3 id="day-number">{#}</h3></div>
-            <div id="day"><h3 id="day-number">{#}</h3></div>
-            <div id="day"><h3 id="day-number">{#}</h3></div>
-            <div id="day"><h3 id="day-number">{#}</h3></div>
-            <div id="day"><h3 id="day-number">{#}</h3></div>
-            <div id="day"><h3 id="day-number">{#}</h3></div>
-            <div id="day"><h3 id="day-number">{#}</h3></div>
-            <div id="day"><h3 id="day-number">{#}</h3></div>
-            <div id="day"><h3 id="day-number">{#}</h3></div>
-            <div id="day"><h3 id="day-number">{#}</h3></div>
-            <div id="day"><h3 id="day-number">{#}</h3></div>
-            <div id="day"><h3 id="day-number">{#}</h3></div>
-            <div id="day"><h3 id="day-number">{#}</h3></div>
-            <div id="day"><h3 id="day-number">{#}</h3></div>
-            <div id="day"><h3 id="day-number">{#}</h3></div>
-            <div id="day"><h3 id="day-number">{#}</h3></div>
-            <div id="day"><h3 id="day-number">{#}</h3></div>
-            <div id="day"><h3 id="day-number">{#}</h3></div>
-            <div id="day"><h3 id="day-number">{#}</h3></div>
-            <div id="day"><h3 id="day-number">{#}</h3></div>
-            <div id="day"><h3 id="day-number">{#}</h3></div>
-            <div id="day"><h3 id="day-number">{#}</h3></div>
-            <div id="day"><h3 id="day-number">{#}</h3></div>
-            <div id="day"><h3 id="day-number">{#}</h3></div>
-            <div id="day"><h3 id="day-number">{#}</h3></div>
-            <div id="day"><h3 id="day-number">{#}</h3></div>
-            <div id="day"><h3 id="day-number">{#}</h3></div>
-            <div id="day"><h3 id="day-number">{#}</h3></div>
-            <div id="day"><h3 id="day-number">{#}</h3></div>
-            <div id="day"><h3 id="day-number">{#}</h3></div>
-            <div id="day"><h3 id="day-number">{#}</h3></div>
-            <div id="day"><h3 id="day-number">{#}</h3></div>
-            <div id="day"><h3 id="day-number">{#}</h3></div>
-            <div id="day"><h3 id="day-number">{#}</h3></div>
+          <!--Each day element should have a clickable JavaScript element that sets the display of calendar-view to 'None'
+          and displays day-view element instead-->
+            <div id="day" onclick="handleDayClick(index)><h3 id="day-number">{#}</h3></div>
+            <div id="day" onclick="handleDayClick(index)><h3 id="day-number">{#}</h3></div>
+            <div id="day" onclick="handleDayClick(index)><h3 id="day-number">{#}</h3></div>
+            <div id="day" onclick="handleDayClick(index)><h3 id="day-number">{#}</h3></div>
+            <div id="day" onclick="handleDayClick(index)><h3 id="day-number">{#}</h3></div>
+            <div id="day" onclick="handleDayClick(index)><h3 id="day-number">{#}</h3></div>
+            <div id="day" onclick="handleDayClick(index)><h3 id="day-number">{#}</h3></div>
+            <div id="day" onclick="handleDayClick(index)><h3 id="day-number">{#}</h3></div>
+            <div id="day" onclick="handleDayClick(index)><h3 id="day-number">{#}</h3></div>
+            <div id="day" onclick="handleDayClick(index)><h3 id="day-number">{#}</h3></div>
+            <div id="day" onclick="handleDayClick(index)><h3 id="day-number">{#}</h3></div>
+            <div id="day" onclick="handleDayClick(index)><h3 id="day-number">{#}</h3></div>
+            <div id="day" onclick="handleDayClick(index)><h3 id="day-number">{#}</h3></div>
+            <div id="day" onclick="handleDayClick(index)><h3 id="day-number">{#}</h3></div>
+            <div id="day" onclick="handleDayClick(index)><h3 id="day-number">{#}</h3></div>
+            <div id="day" onclick="handleDayClick(index)><h3 id="day-number">{#}</h3></div>
+            <div id="day" onclick="handleDayClick(index)><h3 id="day-number">{#}</h3></div>
+            <div id="day" onclick="handleDayClick(index)><h3 id="day-number">{#}</h3></div>
+            <div id="day" onclick="handleDayClick(index)><h3 id="day-number">{#}</h3></div>
+            <div id="day" onclick="handleDayClick(index)><h3 id="day-number">{#}</h3></div>
+            <div id="day" onclick="handleDayClick(index)><h3 id="day-number">{#}</h3></div>
+            <div id="day" onclick="handleDayClick(index)><h3 id="day-number">{#}</h3></div>
+            <div id="day" onclick="handleDayClick(index)><h3 id="day-number">{#}</h3></div>
+            <div id="day" onclick="handleDayClick(index)><h3 id="day-number">{#}</h3></div>
+            <div id="day" onclick="handleDayClick(index)><h3 id="day-number">{#}</h3></div>
+            <div id="day" onclick="handleDayClick(index)><h3 id="day-number">{#}</h3></div>
+            <div id="day" onclick="handleDayClick(index)><h3 id="day-number">{#}</h3></div>
+            <div id="day" onclick="handleDayClick(index)><h3 id="day-number">{#}</h3></div>
+            <div id="day" onclick="handleDayClick(index)><h3 id="day-number">{#}</h3></div>
+            <div id="day" onclick="handleDayClick(index)><h3 id="day-number">{#}</h3></div>
+            <div id="day" onclick="handleDayClick(index)><h3 id="day-number">{#}</h3></div>
+            <div id="day" onclick="handleDayClick(index)><h3 id="day-number">{#}</h3></div>
+            <div id="day" onclick="handleDayClick(index)><h3 id="day-number">{#}</h3></div>
+            <div id="day" onclick="handleDayClick(index)><h3 id="day-number">{#}</h3></div>
+            <div id="day" onclick="handleDayClick(index)><h3 id="day-number">{#}</h3></div>
         </div>
 
     </div>
 
     <!--Day View (Same HTML Page, Full Size)-->
-    <div class="day-view">
+    <div class="day-view" style="display: none;">
         <!--Date Header (E.g. Friday, April 23 2024)-->
         <div id="day-view-date"><h1>{DAY} {MONTH} {DAY #} {YEAR}</h1></div>
 
