@@ -97,7 +97,7 @@ const manipulate = () => {
             && year === new Date().getFullYear()
             ? "active"
             : "";
-        lit += `<li class="${isToday}">${i}</li>`;
+        lit += `<li class="date-item ${isToday}" data-date="${year}-${String(month + 1).padStart(2,'0')}-${String(i).padStart(2, '0')}">${i}</li>`;
     }
  
     // Loop to add the first dates of the next month
@@ -122,14 +122,30 @@ const manipulate = () => {
 manipulate();
 
 //Function that opens the day view
-function openDayView(date){
+function openDayView(dateString){
     //Shows day view
     dayView.style.display = 'block';
     //Hide calendar view
     calendarView.style.display = 'none';
     
     //Update day view content based on the clicked date
-    document.getElementById('day-view-date').textContent = date;
+    let formattedDate = formatDateForJournalEntries(dateString);
+    document.querySelector('.day-view-date').textContent = formattedDate;
+
+    // Shows journal entries for selected date
+    let titles = getTitles(formattedDate);
+    let journalList = document.getElementById('journal-list');
+    journalList.innerHTML = '';
+    titles.forEach(title => {
+        let listItem = document.createElement('li');
+        listItem.textContent = title;
+        journalList.appendChild(listItem);
+    });
+}
+
+function formatDateForJournalEntries(dateString){
+    const[year, month, day] = dateString.split('-');
+    return `${parseInt(month)}/${parseInt(day)}/${year}`;
 }
 
 //Function to close day view and return to calendar
@@ -177,6 +193,9 @@ prenexIcons.forEach(icon => {
         manipulate();
     });
 });
+
+// Back button functionality 
+document.querySelector('.back-button').onclick = closeDayView;
 
 // Attach event listener for the return to calendar button in the day view
 returnCalendarButton.addEventListener('click', closeDayView);
