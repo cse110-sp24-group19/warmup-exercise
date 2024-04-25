@@ -26,10 +26,16 @@ body {
   justify-content: center;
 }
 
+/* 
+  ======================================================================================================
+  ||                                          MONTH-VIEW                                                ||
+  ======================================================================================================
+*/
+
 /* use this to edit the calendar container as a whole */
 .calendar-container {
   background: #fff;
-  margin: 100px 60px 40px 60px;
+  margin: 100px 30px 40px 30px;
   width: 1000px;
   height: 750px;
   min-width: 600px;
@@ -61,7 +67,7 @@ header .calendar-navigation span {
   border-radius: 50%;
   user-select: none;
   color: #aeabab;
-  font-size: 1.9rem;
+  font-size: 35px;
 }
 
 .calendar-navigation span:last-child {
@@ -80,7 +86,7 @@ header img {
 /* Use this change the style of the current date header i.e April, 2024 */
 header .calendar-current-date {
   font-weight: 500;
-  font-size: 2.45rem;
+  font-size: 42px;
   margin:10px;
   font-family: raleway, Tahoma, sans-serif;
   color: #15171a;
@@ -101,7 +107,7 @@ header .calendar-current-date {
   margin-bottom: 20px;
 }
 
-/*Use this to edit the individual dates in the calendar as a whole */
+/* Use this to edit the individual dates in the calendar as a whole */
 .calendar-body li {
   width: calc(100% / 7);
   font-size: 16px;
@@ -115,7 +121,7 @@ header .calendar-current-date {
   font-weight: bold;
 }
 
-.calendar-body .calendar-weekdays .sunday {
+.calendar-body .calendar-weekdays .weekends {
   color: #d44e60;
 }
 
@@ -158,30 +164,70 @@ header .calendar-current-date {
 .calendar-dates li:hover::before {
   background: #e4e1e1;
 }
-/*
+
+/* 
+  ======================================================================================================
+  ||                                          DAY-VIEW                                                 ||
+  ======================================================================================================
+*/
 
 .day-view{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-items: center;
+  background: #fff;
+  margin: 100px 30px 40px 0;
+  width: 600px;
+  height: 750px;
+  min-width: 400px;
+  border-radius: 30px;
+  box-shadow: 2px 2px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+.day-view-date{
+  font-family: raleway, Tahoma, sans-serif;
+  font-size: 24px;
+  color: #15171a;
+  margin: 60px auto 30px;
+}
+
+.journal-entries{
+  padding: 30px;
+  width: 70%;
+  height: 100%;
+}
+
+.journal-entries h3{
+  font-family: raleway, Tahoma, sans-serif;
+  font-size: 18px;
+}
+
+.journal-entries ul{
 
 }
 
-#day-view-date{
+.journal-entries li{
 
 }
 
-#journal-entries{
-
-}
-#journal-entries h3{
-
-}
-#journal-entries ul{
-
-}
-#journal-entries li{
-
-}
-#back-button{
-
+.back-button{
+  margin: 60px auto 80px;
+  padding: 13px 23px;
+  font-size: 14px;
+  font-weight: bold;
+  border: none;
+  border-radius: 100px;
+  background-image: linear-gradient(to right, #FF8008 0%, #FFC837  51%, #FF8008  100%);
+  box-shadow: 2px 2px 8px 0 rgba(0, 0, 0, 0.2);
+  cursor: pointer;
 }
 
-*/
+.back-button:hover {
+  color: white;
+}
+
+.back-button:active {
+  box-shadow: 1px 1px 8px 0 rgba(0, 0, 0, 0.2);
+  background-image: linear-gradient(to right bottom, palevioletred, lightsteelblue);
+}
