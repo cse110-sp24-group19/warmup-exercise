@@ -41,7 +41,7 @@ body {
 /* use this to edit the calendar container as a whole */
 .calendar-container {
   background: #fff;
-  margin: 100px 30px 40px 30px;
+  margin: 100px 60px 40px 60px;
   width: 1000px;
   height: 750px;
   min-width: 600px;
@@ -180,7 +180,7 @@ header .calendar-current-date {
   display: flex;
   flex-direction: column;
   background: #fff;
-  margin: 100px 30px 40px 0;
+  margin: 100px 60px 40px 60px;
   width: 1000px;
   height: 750px;
   min-width: 400px;
