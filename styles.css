@@ -31,6 +31,7 @@ body {
   margin: 100px 60px 40px 60px;
   width: 1000px;
   height: 750px;
+  min-width: 600px;
   border-radius: 30px;
   box-shadow: 2px 2px 8px 0 rgba(0, 0, 0, 0.2);
 }
@@ -39,7 +40,7 @@ body {
 .calendar-container header {
   display: flex;
   align-items: center;
-  padding: 25px 30px 0;
+  padding: 25px 60px 0;
   justify-content: space-between;
 }
 
@@ -70,13 +71,18 @@ header .calendar-navigation span:hover {
   background: #f2f2f2;
 }
 
+header img {
+  width: 80px;
+  height: 80px;
+}
+
 /* Use this change the style of the current date header i.e April, 2024 */
 header .calendar-current-date {
   font-weight: 500;
   font-size: 2.45rem;
   margin:10px;
   font-family: raleway, Tahoma, sans-serif;
-  font-style: normal;
+  color: #15171a;
 }
 
 .calendar-body {
@@ -144,9 +150,7 @@ header .calendar-current-date {
 
 /*use this to change the color of the current date */
 .calendar-dates li.active::before {
-  background: linear-gradient(to bottom, rgba(255,255,255,0.15) 0%, rgba(0,0,0,0.15) 100%), 
-  radial-gradient(at top center, rgba(255,255,255,0.40) 0%, rgba(0,0,0,0.40) 120%) #989898;
-  background-blend-mode: multiply,multiply;
+  background: crimson;
 }
 
 /* Use this to change the color of when you hover on dates */
