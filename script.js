@@ -115,7 +115,9 @@ const manipulate = () => {
 
     //Attach event listeners to each date for opening day view
     document.querySelectorAll('.date-item').forEach(item => {
-        item.addEventListener('click', () => openDayView(item.dataset.date));
+        item.addEventListener('click', function(){
+            openDayView(this.getAttribute('data-date'));
+        });
     });
 };
  
@@ -123,11 +125,6 @@ manipulate();
 
 //Function that opens the day view
 function openDayView(dateString){
-    //Shows day view
-    dayView.style.display = 'block';
-    //Hide calendar view
-    calendarView.style.display = 'none';
-    
     //Update day view content based on the clicked date
     let formattedDate = formatDateForJournalEntries(dateString);
     document.querySelector('.day-view-date').textContent = formattedDate;
@@ -141,8 +138,14 @@ function openDayView(dateString){
         listItem.textContent = title;
         journalList.appendChild(listItem);
     });
+
+    //Shows day view
+    dayView.style.display = 'block';
+    //Hide calendar view
+    calendarView.style.display = 'none';
 }
 
+//Format date for journal entries
 function formatDateForJournalEntries(dateString){
     const[year, month, day] = dateString.split('-');
     return `${parseInt(month)}/${parseInt(day)}/${year}`;
@@ -193,9 +196,6 @@ prenexIcons.forEach(icon => {
         manipulate();
     });
 });
-
-// Back button functionality 
-document.querySelector('.back-button').onclick = closeDayView;
 
 // Attach event listener for the return to calendar button in the day view
 returnCalendarButton.addEventListener('click', closeDayView);
