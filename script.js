@@ -69,7 +69,7 @@ const manipulate = () => {
             && year === new Date().getFullYear()
             ? "active"
             : "";
-            lit += `<li class="${isToday}">${i}</li>`;
+        lit += `<li class="${isToday}">${i}</li>`;
     }
  
     // Loop to add the first dates of the next month
