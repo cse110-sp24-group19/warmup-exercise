@@ -90,14 +90,18 @@ const manipulate = () => {
  
     // Loop to add the dates of the current month
     for (let i = 1; i <= lastdate; i++) {
- 
+        
+        let date = new Date(year, month, i);
+        let dayOfWeek = date.getDay();
+        // 0 = Sunday and 6 = Saturday
+        let isWeekend = (dayOfWeek === 0 || dayOfWeek === 6) ? "weekend" : ""; 
         // Check if the current date is today
-        let isToday = i === date.getDate()
+        let isToday = i === new Date().getDate()
             && month === new Date().getMonth()
             && year === new Date().getFullYear()
             ? "active"
             : "";
-        lit += `<li class="date-item ${isToday}" data-date="${year}-${String(month+1).padStart(2,'0')}-${String(i).padStart(2, '0')}">${i}</li>`;
+        lit += `<li class="date-item ${isToday} ${isWeekend}" data-date="${year}-${String(month+1).padStart(2,'0')}-${String(i).padStart(2, '0')}">${i}</li>`;
     }
  
     // Loop to add the first dates of the next month
