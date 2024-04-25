@@ -1,4 +1,32 @@
+// dummy data for journal entries
+let journalEntries = [
+    { date: "4/24/2024", title: "Completed Major Project Ahead of Schedule" },
+    { date: "4/23/2024", title: "Received Employee of the Month Award" },
+    { date: "4/22/2024", title: "Delivered Engaging Presentation to Stakeholders" },
+    { date: "4/21/2024", title: "Successfully Resolved Complex Technical Issue" },
+    { date: "4/20/2024", title: "Implemented Efficiency-Boosting Process Improvement" },
+    { date: "4/19/2024", title: "Secured New Client Account" },
+    { date: "4/18/2024", title: "Received Positive Feedback from Supervisor" },
+    { date: "4/17/2024", title: "Met Tight Deadline on Key Project" },
+    { date: "4/16/2024", title: "Collaborated Effectively with Cross-Functional Team" },
+    { date: "4/15/2024", title: "Completed Training Program with High Marks" },
+    { date: "4/14/2024", title: "Implemented Innovative Solution to Improve Workflow" },
+    { date: "4/13/2024", title: "Recognized for Outstanding Customer Service" },
+    { date: "4/12/2024", title: "Published Article in Industry Journal" },
+];
 
+// function to retrieve journal entry titles from the array of journal entries
+function getTitles(date) {
+    const titles = [];
+    for (let entry of journalEntries) {
+        if (entry.date === date) {
+            titles.push(entry.title);
+        }
+    }
+    return titles;
+}
+
+// get current date information
 let date = new Date();
 let year = date.getFullYear();
 let month = date.getMonth();
