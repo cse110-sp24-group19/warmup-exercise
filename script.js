@@ -97,7 +97,7 @@ const manipulate = () => {
             && year === new Date().getFullYear()
             ? "active"
             : "";
-        lit += `<li class="date-item ${isToday}" data-date="${year}-${String(month + 1).padStart(2,'0')}-${String(i).padStart(2, '0')}">${i}</li>`;
+        lit += `<li class="date-item ${isToday}" data-date="${year}-${String(month+1).padStart(2,'0')}-${String(i).padStart(2, '0')}">${i}</li>`;
     }
  
     // Loop to add the first dates of the next month
