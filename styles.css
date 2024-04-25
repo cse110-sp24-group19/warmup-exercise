@@ -28,7 +28,7 @@ body {
 /* use this to edit the calendar container as a whole */
 .calendar-container {
   background: #fff;
-  margin: 100px 60px 0 60px;
+  margin: 100px 60px 40px 60px;
   width: 1000px;
   height: 750px;
   border-radius: 30px;
