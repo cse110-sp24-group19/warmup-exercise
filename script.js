@@ -148,3 +148,6 @@ prenexIcons.forEach(icon => {
         manipulate();
     });
 });
+
+// Attach event listener for the return to calendar button in the day view
+returnCalendarButton.addEventListener('click', closeDayView);
