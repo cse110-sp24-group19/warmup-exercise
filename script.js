@@ -88,8 +88,8 @@ const manipulate = () => {
     //Attach event listeners to each date for opening day view
     document.querySelectorAll('.date-item').forEach(item => {
         item.addEventListener('click', () => openDayView(item.dataset.date));
-    })
-}
+    });
+};
  
 manipulate();
 
@@ -100,7 +100,8 @@ function openDayView(date){
     //Hide calendar view
     calendarView.style.display = 'none';
     
-    //possible update day view content based on the clicked date
+    //Update day view content based on the clicked date
+    document.getElementById('day-view-date').textContent = date;
 }
 
 //Function to close day view and return to calendar
