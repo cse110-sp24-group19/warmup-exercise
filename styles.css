@@ -8,6 +8,11 @@
   src: url("assets/Comfortaa-Regular.ttf");
 }
 
+@font-face {
+  font-family: "josefinsans";
+  src: url("assets/JosefinSans-Regular.ttf");
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -57,7 +62,7 @@ header .calendar-navigation {
   display: flex;
 }
 
-/* use this to control the navigation buttons < >*/
+/* use this to control the navigation buttons < > */
 header .calendar-navigation span {
   height: 38px;
   width: 38px;
@@ -198,9 +203,8 @@ header .calendar-current-date {
 }
 
 .journal-entries h3 {
-  font-family: raleway, Tahoma, sans-serif;
+  font-family: josefinsans, Tahoma, sans-serif;
   font-size: 20px;
-  font-weight: bold;
   margin-bottom: 20px;
   text-transform: uppercase;
 }
@@ -233,7 +237,7 @@ header .calendar-current-date {
 .back-button {
   margin: 60px auto 80px;
   padding: 13px 23px;
-  font-size: 14px;
+  font-size: 15px;
   font-weight: bold;
   border: none;
   border-radius: 100px;
