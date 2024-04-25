@@ -12,6 +12,7 @@
   margin: 0;
   padding: 0;
   font-family: comfortaa, Tahoma, sans-serif;
+  color: #15171a;
 }
 
 body {
@@ -89,7 +90,6 @@ header .calendar-current-date {
   font-size: 42px;
   margin:10px;
   font-family: raleway, Tahoma, sans-serif;
-  color: #15171a;
 }
 
 .calendar-body {
@@ -171,7 +171,7 @@ header .calendar-current-date {
   ======================================================================================================
 */
 
-.day-view{
+.day-view {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -185,33 +185,52 @@ header .calendar-current-date {
   box-shadow: 2px 2px 8px 0 rgba(0, 0, 0, 0.2);
 }
 
-.day-view-date{
+.day-view-date {
   font-family: raleway, Tahoma, sans-serif;
-  font-size: 24px;
-  color: #15171a;
+  font-size: 28px;
   margin: 60px auto 30px;
 }
 
-.journal-entries{
+.journal-entries {
   padding: 30px;
   width: 70%;
   height: 100%;
 }
 
-.journal-entries h3{
+.journal-entries h3 {
   font-family: raleway, Tahoma, sans-serif;
-  font-size: 18px;
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  text-transform: uppercase;
 }
 
-.journal-entries ul{
-
+.journal-entries ul {
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+  justify-content: flex-start;
+  align-items: flex-start;
 }
 
-.journal-entries li{
-
+.journal-entries li {
+  margin-top: 15px;
+  font-size: 16px;
+  text-transform: uppercase;
 }
 
-.back-button{
+.journal-entries li:hover {
+  cursor: pointer;
+  text-decoration: underline;
+  color: palevioletred;
+  font-weight: bold;
+}
+
+.journal-entries li:active {
+  color: darkcyan;
+}
+
+.back-button {
   margin: 60px auto 80px;
   padding: 13px 23px;
   font-size: 14px;
