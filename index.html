@@ -47,109 +47,27 @@
     <!--Day View (Same HTML Page, Full Size)-->
     <div class="day-view" style="display: none;">
         <!--Date Header (E.g. Friday, April 23 2024)-->
-        <div id="day-view-date"><h1>{DAY} {MONTH} {DAY #} {YEAR}</h1></div>
+        <header id="day-view-date">{DAY} {MONTH} {DAY #} {YEAR}</header>
 
-        <!--Set of tasks as containers-->
-        <div id="tasks">
-            <!--JavaScript will have some sort of array that dynamically fills in as many Task containers
-            as needed (E.g. 4 tasks = 4 task containers)-->
-            <div id="task">
-                <!--Load label based on JSON data-->
-                <div id="task-label">
-                    {LABEL FOR THIS TASK}
-                </div>
+        <!--Set of journals as containers-->
+        <div id="journal-entries">
+            <!--Header for Journal Entries-->
+            <h3>Journal Entries:</h3>
 
-                <!--Maybe we want lists for each task? (temporary design)-->
                 <ul>
-                    <!--JavaScript will decicde how many lists we need for each unique task-->
-                    <li>{DATA HERE FOR A TASK}</li>
+                    <!--JavaScript/JSON will decide how many lists we need for our journal-->
+                    <li>{DATA HERE FOR jOURNAL}</li>
+                    <li>{MORE DATA HERE}</li>
                 </ul>
-            </div>
-
-            <!--JavaScript should make this available by the press of some button -->
-            <button id="add-task-button" onclick="showNewTaskSection()">Add New Task</button>
-
-            <!--Hidden Until <Add New Task> button is pressed!-->
-            <div id="new-task" style="display: none;">
-                <label for="new-task-label">Task Label:</label>
-                <input type="text" id="new-task-label2" placeholder="Enter task label">
-        
-                <label for="new-task-data">Task Data:</label>
-                <input type="text" id="new-task-data2" placeholder="Enter task data">
-        
-                <button id="confirm-task-button" onclick="addTask()">Add Task</button>
-            </div>
 
         </div>
 
-         <!-- Set of event containers (user can modify, autosave?) -->
-         <div id="events">
-            <!--JavaScript will have some sort of array that dynamically fills in as many Event containers
-            as needed (E.g. 4 events = 4 event containers)-->
-            <div id="event">
-                <!--Load label based on JSON data-->
-                <div id="event-label">
-                    {LABEL FOR THIS EVENT}
-                </div>
-
-                <!--Maybe we want lists for each event? (temporary design)-->
-                <ul>
-                    <!--JavaScript will decicde how many lists we need for each unique event-->
-                    <li>{DATA HERE FOR A EVENT}</li>
-                </ul>
-            </div>
-        
-            <!-- Button to show the new event input section -->
-            <button id="add-event-button" onclick="showNewEventSection()">Add New Event</button>
-        
-            <!--Hidden Until <Add New Event> button is pressed!-->
-            <div id="new-event" style="display: none;">
-                <label for="new-event-title">Event Title:</label>
-                <input type="text" id="new-event-title2" placeholder="Enter event title">
-        
-                <label for="new-event-time">Event Time:</label>
-                <input type="text" id="new-event-time2" placeholder="Enter event time">
-        
-                <button id="confirm-event-button" onclick="addEvent()">Add Event</button>
-            </div>
-        </div>
-
-         <!-- Set of note containers (user can modify, autosave?) -->
-        <div id="notes">
-
-            <!--JavaScript will determine how many Note containers we need based on JSON data.
-            Each container is like a sticky note of notes.-->
-            <div id="note">
-                <label for="note-label">{Notes[index]}</label>
-
-                <!--User can also type here and somehow JavaScript will autosave or manually save into
-                JSON data whatever changes occurred.-->
-                <textarea id="note-area" rows="5" cols="50" placeholder="">
-                    {JSON FILLS OUT ANY EXISTING NOTE INFO HERE}
-                </textarea>
-            </div>
-
-            <!--NOTE: Maybe we want a different design when adding notes. Up to the group if they prefer
-            this new design or the hidden until <button> is pressed!-->
-
-            <!--Maybe here the user can add a new note for this specific day.
-            After the user submits/autosaved/manually saves, the new note should be uploaded to
-            JSON as well as be added into the set of Notes containers-->
-            <div id="new-note">
-                <label for="note-label">{Notes[index]}</label>
-
-                <!--User can type here to add a new note. Up to JavaScript to determine how to save/submit
-                the new note. Data should be automatically uploaded into JSON for retrieval.-->
-                <textarea id="note-area" rows="5" cols="50" placeholder="Add note here...">
-                    {ADD INFO TO YOUR NEW NOTE HERE}
-                </textarea>
-            </div>
-          
-        </div>
-
-      <!--Should set the display of day-view to none and make calendar viweable-->
-      <div id="return-calendar" onclick="handleExampleDivClick()">Click me to return to Calendar View</div>
+        <!--button to return back to original position
+        After pressing it should set day-view display to none
+        and display the calendar-container-->
+        <button class="back-button" onclick="handleClick()">Go Back</button>
     </div>
-
+    <!--Day View Ends Here-->
+    
   </body>
 </html>
