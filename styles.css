@@ -179,11 +179,9 @@ header .calendar-current-date {
 .day-view {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-items: center;
   background: #fff;
   margin: 100px 30px 40px 0;
-  width: 600px;
+  width: 1000px;
   height: 750px;
   min-width: 400px;
   border-radius: 30px;
@@ -191,15 +189,16 @@ header .calendar-current-date {
 }
 
 .day-view-date {
-  font-family: raleway, Tahoma, sans-serif;
-  font-size: 28px;
+  text-align: center;
+  font-size: 42px;
   margin: 60px auto 30px;
 }
 
 .journal-entries {
   padding: 30px;
-  width: 70%;
-  height: 100%;
+  width: 80%;
+  height: 50%;
+  margin: 10px auto;
 }
 
 .journal-entries h3 {
@@ -235,7 +234,7 @@ header .calendar-current-date {
 }
 
 .back-button {
-  margin: 60px auto 80px;
+  margin-left: 100px;
   padding: 13px 23px;
   font-size: 15px;
   font-weight: bold;
