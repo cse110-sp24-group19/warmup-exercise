@@ -32,13 +32,13 @@
       <div class="calendar-body">
             <!--Static Weekdays Header-->
           <ul class="calendar-weekdays">
-              <li class="sunday">Sun</li>
+              <li class="weekends">Sun</li>
               <li>Mon</li>
               <li>Tue</li>
               <li>Wed</li>
               <li>Thu</li>
               <li>Fri</li>
-              <li>Sat</li>
+              <li class="weekends">Sat</li>
           </ul>
           <ul class="calendar-dates"></ul>
       </div>
@@ -46,21 +46,20 @@
    <!-- CALENDAR HTML END-->
 
     <!--Day View (Same HTML Page, Full Size) style="display: none;"-->
-    <div class="day-view" style="display: none";>
+    <div class="day-view">
         <!--Date Header (E.g. Friday, April 23 2024)-->
-        <header id="day-view-date">{DAY} {MONTH} {DAY #} {YEAR}</header>
+        <!--<header id="day-view-date">{DAY} {MONTH} {DAY #} {YEAR}</header>-->
+        <header class="day-view-date">Friday, April 23 2024</header>
 
         <!--Set of journals as containers-->
-        <div id="journal-entries">
+        <div class="journal-entries">
             <!--Header for Journal Entries-->
-            <h3>Journal Entries:</h3>
-
-                <ul>
-                    <!--JavaScript/JSON will decide how many lists we need for our journal-->
-                    <li>{DATA HERE FOR jOURNAL}</li>
-                    <li>{MORE DATA HERE}</li>
-                </ul>
-
+          <h3>Journal Entries:</h3>
+          <ul>
+              <!--JavaScript/JSON will decide how many lists we need for our journal-->
+              <li>{DATA HERE FOR jOURNAL}</li>
+              <li>{MORE DATA HERE}</li>
+          </ul>
         </div>
 
         <!--button to return back to original position
