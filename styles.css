@@ -230,7 +230,7 @@ header .calendar-current-date {
 }
 
 .journal-entries li:active {
-  color: darkcyan;
+  color: plum;
 }
 
 .back-button {
