@@ -126,7 +126,7 @@ header .calendar-current-date {
   font-weight: bold;
 }
 
-.calendar-body .calendar-weekdays .weekends {
+.calendar-body .calendar-weekdays .weekends, .calendar-dates li.weekend {
   color: #d44e60;
 }
 
