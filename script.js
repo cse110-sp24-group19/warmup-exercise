@@ -110,7 +110,7 @@ function closeDayView(){
     dayView.style.display = 'none';
 
     //Shows calendar view
-    calendarView.Style.display = 'block';
+    calendarView.style.display = 'block';
 }
 
 // Attach a click event listener to each icon
