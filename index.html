@@ -23,49 +23,49 @@
         <img src="assets/monkey2.png" alt="">
         <p class="calendar-current-date"></p>
         <div class="calendar-navigation">
-            <span id="calendar-prev" class="material-symbols-rounded">chevron_left</span>
-            <span id="calendar-next" class="material-symbols-rounded">chevron_right</span>
+          <span id="calendar-prev" class="material-symbols-rounded">chevron_left</span>
+          <span id="calendar-next" class="material-symbols-rounded">chevron_right</span>
         </div>
       </header>
 
       <!-- Calendar Body for displaying the dates-->
       <div class="calendar-body">
-            <!--Static Weekdays Header-->
-          <ul class="calendar-weekdays">
-              <li class="weekends">Sun</li>
-              <li>Mon</li>
-              <li>Tue</li>
-              <li>Wed</li>
-              <li>Thu</li>
-              <li>Fri</li>
-              <li class="weekends">Sat</li>
-          </ul>
-          <ul class="calendar-dates"></ul>
+        <!--Static Weekdays Header-->
+        <ul class="calendar-weekdays">
+          <li class="weekends">Sun</li>
+          <li>Mon</li>
+          <li>Tue</li>
+          <li>Wed</li>
+          <li>Thu</li>
+          <li>Fri</li>
+          <li class="weekends">Sat</li>
+        </ul>
+        <ul class="calendar-dates"></ul>
       </div>
   </div>
    <!-- CALENDAR HTML END-->
 
     <!--Day View (Same HTML Page, Full Size) style="display: none;"-->
     <div class="day-view" style="display: none;">
-        <!--Date Header (E.g. Friday, April 26 2024)-->
-        <!--<header id="day-view-date">{DAY} {MONTH} {DAY #} {YEAR}</header>-->
-        <header class="day-view-date">Friday, April 26 2024</header>
+      <!--Date Header (E.g. Friday, April 26 2024)-->
+      <!--<header id="day-view-date">{DAY} {MONTH} {DAY #} {YEAR}</header>-->
+      <header class="day-view-date">Friday, April 26 2024</header>
 
-        <!--Set of journals as containers-->
-        <div class="journal-entries">
-          <!--Header for Journal Entries-->
-          <h3>Journal Entries:</h3>
-          <ul id="journal-list">
-              <!--JavaScript/JSON will decide how many lists we need for our journal-->
-              <li>DATA HERE FOR JOURNAL</li>
-              <li>MORE DATA HERE</li>
-          </ul>
-        </div>
+      <!--Set of journals as containers-->
+      <div class="journal-entries">
+        <!--Header for Journal Entries-->
+        <h3>Journal Entries:</h3>
+        <ul id="journal-list">
+            <!--JavaScript/JSON will decide how many lists we need for our journal-->
+            <li>DATA HERE FOR JOURNAL</li>
+            <li>MORE DATA HERE</li>
+        </ul>
+      </div>
 
-        <!--button to return back to original position
-        After pressing it should set day-view display to none
-        and display the calendar-container-->
-        <button class="back-button" onclick="handleClick()">Go Back</button>
+      <!--button to return back to original position
+      After pressing it should set day-view display to none
+      and display the calendar-container-->
+      <button class="back-button" onclick="handleClick()">Go Back</button>
     </div>
     <!--Day View Ends Here-->
     
