@@ -74,7 +74,7 @@ const manipulate = () => {
  
     // Loop to add the first dates of the next month
     for (let i = dayend; i < 6; i++) {
-        lit += `<li class="inactive">${i - dayend + 1}</li>`
+        lit += `<li class="inactive">${i - dayend + 1}</li>`;
     }
  
     // Update the text of the current date element 
