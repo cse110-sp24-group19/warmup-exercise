@@ -38,7 +38,7 @@ body {
   ======================================================================================================
 */
 
-/* use this to edit the calendar container as a whole */
+/* Use this to edit the calendar container as a whole */
 .calendar-container {
   background: #fff;
   margin: 100px 60px 40px 60px;
@@ -49,7 +49,7 @@ body {
   box-shadow: 2px 2px 8px 0 rgba(0, 0, 0, 0.2);
 }
 
-/* use this to edit the header container of the calendar container, this includes: Current Date and navigation buttons */
+/* Use this to edit the header container of the calendar container, this includes: Current Date and navigation buttons */
 .calendar-container header {
   display: flex;
   align-items: center;
@@ -57,12 +57,12 @@ body {
   justify-content: space-between;
 }
 
-/*use this to control the navigation itself */
+/* Use this to control the navigation itself */
 header .calendar-navigation {
   display: flex;
 }
 
-/* use this to control the navigation buttons < > */
+/* Use this to control the navigation buttons < > */
 header .calendar-navigation span {
   height: 38px;
   width: 38px;
@@ -130,7 +130,7 @@ header .calendar-current-date {
   color: #d44e60;
 }
 
-/* use this to change the rows in the calendar*/
+/* Use this to change the rows in the calendar */
 .calendar-body .calendar-dates li {
   margin-top: 65px;
   position: relative;
@@ -138,13 +138,13 @@ header .calendar-current-date {
   cursor: pointer;
 }
 
-/* use this to change the color of dates that are in the past month or in the next month */
+/* Use this to change the color of dates that are in the past month or in the next month */
 .calendar-dates li.inactive {
   color: #aaa;
   cursor: default;
 }
 
-/* use this to change the color of the current date */
+/* Use this to change the color of the current date */
 .calendar-dates li.active {
   color: #fff;
 }
@@ -161,12 +161,12 @@ header .calendar-current-date {
   transform: translate(-50%, -50%);
 }
 
-/*use this to change the background color of the current date */
+/* Use this to change the background color of the current date */
 .calendar-dates li.active::before {
   background: crimson;
 }
 
-/* Use this to change the background color of when you hover on dates */
+/* Use this to change the background color of dates when hovering over them */
 .calendar-dates li:hover::before {
   background: #e4e1e1;
 }
@@ -175,7 +175,16 @@ header .calendar-current-date {
   background: lightgray;
 }
 
-/* Use this to change the color of when you hover on dates that are in the past month or in the next month */
+/* Use this to change the background color of the current date when hovering over it */
+.calendar-dates li.active:hover::before {
+  background: lightcoral;
+}
+
+.calendar-dates li.active:active::before {
+  background: indianred;
+}
+
+/* Use this to change the color of dates that are in the past month or in the next month when hovering over them */
 .calendar-dates li.inactive:hover::before {
   background: none;
 }
