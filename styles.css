@@ -34,7 +34,7 @@ body {
 
 /* 
   ======================================================================================================
-  ||                                          MONTH-VIEW                                                ||
+  ||                                          MONTH-VIEW                                               ||
   ======================================================================================================
 */
 
@@ -141,9 +141,10 @@ header .calendar-current-date {
 /* use this to change the color of dates that are in the past month or in the next month */
 .calendar-dates li.inactive {
   color: #aaa;
+  cursor: default;
 }
 
-/* use this to change the color of dates that are in current month */
+/* use this to change the color of the current date */
 .calendar-dates li.active {
   color: #fff;
 }
@@ -160,14 +161,23 @@ header .calendar-current-date {
   transform: translate(-50%, -50%);
 }
 
-/*use this to change the color of the current date */
+/*use this to change the background color of the current date */
 .calendar-dates li.active::before {
   background: crimson;
 }
 
-/* Use this to change the color of when you hover on dates */
+/* Use this to change the background color of when you hover on dates */
 .calendar-dates li:hover::before {
   background: #e4e1e1;
+}
+
+.calendar-dates li:active::before {
+  background: lightgray;
+}
+
+/* Use this to change the color of when you hover on dates that are in the past month or in the next month */
+.calendar-dates li.inactive:hover::before {
+  background: none;
 }
 
 /* 
